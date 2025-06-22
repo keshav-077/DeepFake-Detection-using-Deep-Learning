@@ -34,10 +34,9 @@
 
   <div class="section">
     <h2>🧠 Model Architecture</h2>
-    <h3>1. EfficientNet-B0</h3>
-    <p>
-      A scalable CNN architecture used for extracting spatial features from each video frame. It uses compound scaling to optimize depth, width, and resolution.
-    </p>
+
+<img src="URL_or_relative_path" alt="Description" width="WIDTH" height="HEIGHT">
+
 
 
   </div>
