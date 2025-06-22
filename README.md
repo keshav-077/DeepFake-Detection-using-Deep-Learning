@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Deepfake Detection - EfficientNet-B0 + BiLSTM</title>
+  
 </head>
 <body style="font-family: Arial, sans-serif; line-height: 1.6; margin: 20px;">
 
@@ -65,52 +65,14 @@
     <li><strong>Tools:</strong> OpenCV, Matplotlib, NumPy, Kaggle API</li>
   </ul>
 
-  <h2>📁 Project Structure</h2>
-  <pre>
-deepfake-detection/
-├── data/                 # Frame-extracted images
-├── models/               # Saved models/checkpoints
-├── utils/                # Preprocessing scripts
-├── notebooks/            # EDA and training notebooks
-├── main.py               # Main training script
-├── requirements.txt      # Python dependencies
-└── README.md             # Project documentation
-  </pre>
-
-  <h2>🚀 Running the Project</h2>
-  <pre>
-1. Clone the repository:
-   git clone https://github.com/your-username/deepfake-detection.git
-   cd deepfake-detection
-
-2. Install dependencies:
-   pip install -r requirements.txt
-
-3. Preprocess the data:
-   python utils/preprocess.py
-
-4. Train the model:
-   python main.py
-  </pre>
-
-  <h2>✅ Key Features</h2>
-  <ul>
-    <li>Combines CNN + RNN for spatio-temporal analysis</li>
-    <li>Real-time capable design</li>
-    <li>Supports face-based preprocessing pipeline</li>
-  </ul>
+ 
 
   <h2>📈 Results</h2>
   <p>
     Achieved high accuracy and generalization on Celeb-DF v2. Capable of identifying subtle inconsistencies across video frames.
   </p>
 
-  <h2>📌 Future Improvements</h2>
-  <ul>
-    <li>Integrate audio-based detection</li>
-    <li>Support more datasets (e.g., FaceForensics++)</li>
-    <li>Optimize for real-time inference on edge devices</li>
-  </ul>
+
 
   <h2>🤝 Acknowledgments</h2>
   <ul>
@@ -120,7 +82,7 @@ deepfake-detection/
   </ul>
 
   <h2>📬 Contact</h2>
-  <p>For collaboration or queries, feel free to reach out via GitHub or email.</p>
+  <p>For queries, feel free to reach out via GitHub or email.</p>
 
 </body>
 </html>
