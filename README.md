@@ -66,7 +66,7 @@
   <h3>2. Confusion Matrix</h3>
   <p>The confusion matrix shows how well the model distinguishes between real and deepfake videos.</p>
   <div style="text-align: center;">
-    <img src="assets/confusion_matrix.png" alt="Confusion Matrix" width="500">
+    <img src="assests/Screenshot 2025-06-22 155958.png" alt="Confusion Matrix" width="600">
   </div>
   <h2>3. Classification Report</h2>
     <ul>
