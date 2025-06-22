@@ -63,7 +63,7 @@
       <li><strong>Recall:</strong> Correctly identified deepfakes out of all actual deepfakes</li>
       <li><strong>F1 Score:</strong> Balance between precision and recall</li>
     </ul>
-    <img src="aassests/Screenshot 2025-06-22 155027.png" alt="Architecture Diagram" width="600">
+    <img src="assests/Screenshot 2025-06-22 155027.png" alt="Architecture Diagram" width="600">
   </div>
 
   <div class="section">
