@@ -35,7 +35,7 @@
   <div class="section">
     <h2>🧠 Model Architecture</h2>
 
-<img src="assets/Screenshot 2025-06-22 154155.png" alt="Architecture Diagram" width="600">
+<img src="assests/Screenshot 2025-06-22 154155.png" alt="Architecture Diagram" width="600">
 
 
 
