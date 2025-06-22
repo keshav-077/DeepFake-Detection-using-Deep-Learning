@@ -3,7 +3,8 @@
 🔍 Deepfake Detection Using EfficientNet-B0 and BiLSTM
 A robust deepfake detection system that leverages EfficientNet-B0 for spatial feature extraction and Bidirectional LSTM (BiLSTM) for capturing temporal dependencies across video frames. Built and trained using the Celeb-DF v2 dataset, this project targets the identification of manipulated facial videos with high precision.
 
-📌 Project Highlights
+#📌 Project Highlights
+
 Dataset: Celeb-DF v2 (5,900+ high-quality real and fake celebrity videos)
 
 Model Architecture: EfficientNet-B0 + BiLSTM + Dense Classification Layer
@@ -14,7 +15,7 @@ Training Hardware: NVIDIA RTX 4050 GPU
 
 Frameworks & Tools: Python, TensorFlow, Keras, NumPy, OpenCV, Matplotlib, Kaggle API
 
-🧠 Methodology
+#🧠 Methodology
 1. Preprocessing
 Frame Extraction: Videos split into individual frames.
 
