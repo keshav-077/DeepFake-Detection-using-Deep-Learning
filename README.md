@@ -56,15 +56,14 @@
   </div>
 
   <div class="section">
-    <h2>📊 Performance Metrics</h2>
+    <h2>📊 Classification Report</h2>
     <ul>
       <li><strong>Accuracy:</strong> Overall correctness of predictions</li>
       <li><strong>Precision:</strong> Correctly identified deepfakes out of all predicted deepfakes</li>
       <li><strong>Recall:</strong> Correctly identified deepfakes out of all actual deepfakes</li>
       <li><strong>F1 Score:</strong> Balance between precision and recall</li>
     </ul>
-
-    <img src="assests/Screenshot 2025-06-22 15155.png" alt="Architecture Diagram" width="600">
+    <img src="aassests/Screenshot 2025-06-22 155027.png" alt="Architecture Diagram" width="600">
   </div>
 
   <div class="section">
