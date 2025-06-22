@@ -2,41 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Deepfake Detection using EfficientNet-B0 and BiLSTM</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    h1, h2 {
-      color: #0057b8;
-    }
-    h3 {
-      color: #2e2e2e;
-    }
-    code {
-      background-color: #e0e0e0;
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-    pre {
-      background-color: #f0f0f0;
-      padding: 15px;
-      border-left: 5px solid #0057b8;
-      overflow-x: auto;
-    }
-    ul, ol {
-      margin-left: 20px;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-    a {
-      color: #0057b8;
-    }
-  </style>
 </head>
 <body>
 
