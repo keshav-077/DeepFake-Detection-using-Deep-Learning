@@ -42,17 +42,7 @@
 
   </div>
 
-  <div class="section">
-    <h2>🚀 How It Works</h2>
-    <pre>
-🎥 Input Video
-   └──> 🎞 Frame Extraction
-            └──> 🧍 Face Detection
-                     └──> 🧠 EfficientNet-B0 (per frame)
-                              └──> 🔁 BiLSTM (sequence analysis)
-                                       └──> 🟢 Classification: Real / Fake
-    </pre>
-  </div>
+
 
   <div class="section">
     <h2>🧪 Experimental Setup</h2>
@@ -73,6 +63,8 @@
       <li><strong>Recall:</strong> Correctly identified deepfakes out of all actual deepfakes</li>
       <li><strong>F1 Score:</strong> Balance between precision and recall</li>
     </ul>
+
+    <img src="assests/Screenshot 2025-06-22 15155.png" alt="Architecture Diagram" width="600">
   </div>
 
   <div class="section">
