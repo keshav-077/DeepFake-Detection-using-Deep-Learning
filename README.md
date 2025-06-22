@@ -60,7 +60,7 @@
   <h3>1. Training vs Testing Accuracy</h3>
   <p>This graph visualizes how well the model performs across epochs, helping identify overfitting or underfitting.</p>
   <div style="text-align: center;">
-    <img src="assets/train_vs_test_accuracy.png" alt="Training vs Testing Accuracy" width="600">
+    <img src="assests/Screenshot 2025-06-22 160119.png" alt="Training vs Testing Accuracy" width="600">
   </div>
 
   <h3>2. Confusion Matrix</h3>
