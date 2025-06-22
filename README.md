@@ -54,9 +54,21 @@
       <li><strong>Frameworks:</strong> Python, TensorFlow, Keras</li>
     </ul>
   </div>
+<div class="section">
+  <h2>📊 Model Evaluation</h2>
 
-  <div class="section">
-    <h2>📊 Classification Report</h2>
+  <h3>1. Training vs Testing Accuracy</h3>
+  <p>This graph visualizes how well the model performs across epochs, helping identify overfitting or underfitting.</p>
+  <div style="text-align: center;">
+    <img src="assets/train_vs_test_accuracy.png" alt="Training vs Testing Accuracy" width="600">
+  </div>
+
+  <h3>2. Confusion Matrix</h3>
+  <p>The confusion matrix shows how well the model distinguishes between real and deepfake videos.</p>
+  <div style="text-align: center;">
+    <img src="assets/confusion_matrix.png" alt="Confusion Matrix" width="500">
+  </div>
+  <h2>3. Classification Report</h2>
     <ul>
       <li><strong>Accuracy:</strong> Overall correctness of predictions</li>
       <li><strong>Precision:</strong> Correctly identified deepfakes out of all predicted deepfakes</li>
@@ -64,7 +76,8 @@
       <li><strong>F1 Score:</strong> Balance between precision and recall</li>
     </ul>
     <img src="assests/Screenshot 2025-06-22 155027.png" alt="Architecture Diagram" width="600">
-  </div>
+</div>
+
 
   <div class="section">
     <h2>✅ Key Features</h2>
