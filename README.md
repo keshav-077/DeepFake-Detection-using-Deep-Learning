@@ -100,7 +100,7 @@
   <div class="section">
     <h2>📬 Contact</h2>
     <p>
-      For collaboration or inquiries, feel free to connect via <a href="https://github.com/your-profile">GitHub</a> or email.
+      For inquiries, feel free to connect via <a href="https://github.com/keshav-077">GitHub</a> or email.
     </p>
   </div>
 
