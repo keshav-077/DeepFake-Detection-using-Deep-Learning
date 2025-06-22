@@ -2,139 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Deepfake Detection using EfficientNet-B0 & BiLSTM</title>
+  <title>Deepfake Detection using EfficientNet-B0 and BiLSTM</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 40px;
-      background-color: #f8f9fa;
-      color: #212529;
+      background-color: #f9f9f9;
+      color: #333;
     }
-    h1, h2, h3, h4 {
-      color: #0d6efd;
+    h1, h2 {
+      color: #0057b8;
+    }
+    h3 {
+      color: #2e2e2e;
     }
     code {
-      background-color: #e9ecef;
-      padding: 2px 4px;
+      background-color: #e0e0e0;
+      padding: 2px 6px;
       border-radius: 4px;
     }
     pre {
-      background: #e9ecef;
-      padding: 10px;
-      border-radius: 5px;
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-left: 5px solid #0057b8;
       overflow-x: auto;
+    }
+    ul, ol {
+      margin-left: 20px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    a {
+      color: #0057b8;
     }
   </style>
 </head>
 <body>
 
-  <h1>🎭 Deepfake Detection using EfficientNet-B0 and BiLSTM</h1>
-
+  <h1>🎭 Deepfake Detection Using EfficientNet-B0 & BiLSTM</h1>
   <p>
-    This project presents a deepfake detection system that integrates <strong>EfficientNet-B0</strong> for extracting spatial features and 
-    <strong>BiLSTM</strong> for modeling temporal dependencies across video frames. The model is trained and evaluated on the 
-    <strong>Celeb-DF v2</strong> dataset.
+    This project showcases an advanced deepfake detection pipeline that combines the strengths of Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs). It leverages <strong>EfficientNet-B0</strong> for spatial feature extraction and <strong>BiLSTM</strong> for capturing temporal dependencies across video frames.
   </p>
 
-  <h2>📁 3. Methodology</h2>
+  <div class="section">
+    <h2>📦 Dataset</h2>
+    <p>
+      We use the <strong><a href="https://www.kaggle.com/datasets">Celeb-DF v2</a></strong> dataset, which contains over 5,900 high-resolution videos of both real and deepfake celebrities.
+    </p>
+    <ul>
+      <li>10-second long video clips with frame-level detail</li>
+      <li>Rich facial expressions and diverse manipulations</li>
+      <li>Perfect for benchmarking deepfake detection algorithms</li>
+    </ul>
+  </div>
 
-  <h3>3.1 Dataset</h3>
-  <p>
-    The Celeb-DF v2 dataset, known for evaluating deepfake detection models, includes over 5,900 high-quality videos (10s each) 
-    of real and fake celebrities. It contains corresponding facial images for each video and is publicly available on Kaggle. 
-    The dataset features deepfakes generated using state-of-the-art techniques, making it ideal for robust evaluation.
-  </p>
+  <div class="section">
+    <h2>⚙️ Preprocessing Pipeline</h2>
+    <ol>
+      <li><strong>Frame Extraction:</strong> Convert each video into image sequences</li>
+      <li><strong>Face Detection:</strong> Crop facial regions using Haar Cascades or MTCNN</li>
+      <li><strong>Resizing & Normalization:</strong> Resize to 224×224 and scale pixel values to [0, 1]</li>
+      <li><strong>Augmentation:</strong> Apply random flips, rotations, and color jittering</li>
+    </ol>
+  </div>
 
-  <h3>3.2 Preprocessing</h3>
-  <ol>
-    <li><strong>Video Frame Extraction:</strong> Converted videos to individual frames to enable frame-by-frame analysis.</li>
-    <li><strong>Resizing & Normalization:</strong> Frames resized to 224x224 and normalized to [0, 1].</li>
-    <li><strong>Data Augmentation:</strong> Applied flipping, rotation, and color jittering to prevent overfitting.</li>
-    <li><strong>Face Detection:</strong> Used Haar Cascades or MTCNN to extract and isolate facial regions in each frame.</li>
-  </ol>
+  <div class="section">
+    <h2>🧠 Model Architecture</h2>
+    <h3>1. EfficientNet-B0</h3>
+    <p>
+      A scalable CNN architecture used for extracting spatial features from each video frame. It uses compound scaling to optimize depth, width, and resolution.
+    </p>
 
-  <h3>3.3 Algorithm</h3>
-  <p>
-    The system uses <strong>EfficientNet-B0</strong> (CNN) to extract spatial features and <strong>BiLSTM</strong> (RNN) to capture forward and backward temporal 
-    dependencies across frames.
-  </p>
+    <h3>2. BiLSTM</h3>
+    <p>
+      A bidirectional LSTM captures forward and backward temporal dependencies across the frame sequence, allowing the model to detect subtle inconsistencies indicative of deepfakes.
+    </p>
 
-  <h4>EfficientNet-B0</h4>
-  <p>
-    EfficientNet-B0 balances model depth, width, and resolution using compound scaling. It efficiently extracts visual cues such 
-    as texture and motion inconsistencies commonly present in deepfakes.
-  </p>
+    <h3>3. Classification</h3>
+    <p>
+      Final output is passed through a dense layer to predict whether the input video is <strong>Real</strong> or <strong>Fake</strong>.
+    </p>
+  </div>
 
-  <h4>BiLSTM</h4>
-  <p>
-    A bidirectional RNN that analyzes sequences in both forward and backward directions to learn fine-grained temporal changes 
-    between video frames.
-  </p>
+  <div class="section">
+    <h2>🚀 How It Works</h2>
+    <pre>
+🎥 Input Video
+   └──> 🎞 Frame Extraction
+            └──> 🧍 Face Detection
+                     └──> 🧠 EfficientNet-B0 (per frame)
+                              └──> 🔁 BiLSTM (sequence analysis)
+                                       └──> 🟢 Classification: Real / Fake
+    </pre>
+  </div>
 
-  <h4>Mathematical Formulation:</h4>
-  <pre>
-  Forget Gate: Ft = σ(Wf * [ht-1 , xt] + bf)
-  Input Gate: It = σ(Wi * [ht-1 , xt] + bi)
-  Cell State Update: Ct = ft * Ct-1 + it * Ct
-  Output Gate: Ot = σ(Wo * [ht-1, xt] + bo)
-  Hidden State Update: ht = ot * tanh(Ct)
-  </pre>
+  <div class="section">
+    <h2>🧪 Experimental Setup</h2>
+    <ul>
+      <li><strong>Processor:</strong> Intel Core i7-13900H</li>
+      <li><strong>GPU:</strong> NVIDIA RTX 4060 (8GB VRAM)</li>
+      <li><strong>RAM:</strong> 16 GB</li>
+      <li><strong>OS:</strong> Windows 11</li>
+      <li><strong>Frameworks:</strong> Python, TensorFlow, Keras</li>
+    </ul>
+  </div>
 
-  <h3>3.4 Architecture and Working</h3>
-  <ul>
-    <li><strong>EfficientNet-B0:</strong> Extracts features from each frame.</li>
-    <li><strong>BiLSTM:</strong> Processes the temporal sequence of frame features.</li>
-    <li><strong>Classifier:</strong> Final output layer predicts Real or Fake.</li>
-  </ul>
+  <div class="section">
+    <h2>📊 Performance Metrics</h2>
+    <ul>
+      <li><strong>Accuracy:</strong> Overall correctness of predictions</li>
+      <li><strong>Precision:</strong> Correctly identified deepfakes out of all predicted deepfakes</li>
+      <li><strong>Recall:</strong> Correctly identified deepfakes out of all actual deepfakes</li>
+      <li><strong>F1 Score:</strong> Balance between precision and recall</li>
+    </ul>
+  </div>
 
-  <h4>Working Steps:</h4>
-  <ol>
-    <li>Extract frames from video</li>
-    <li>Detect and crop face</li>
-    <li>Pass each frame through EfficientNet-B0</li>
-    <li>Feed sequence to BiLSTM</li>
-    <li>Output final prediction: Real or Deepfake</li>
-  </ol>
+  <div class="section">
+    <h2>✅ Key Features</h2>
+    <ul>
+      <li>Combines CNN and RNN for spatio-temporal deepfake detection</li>
+      <li>Real-time capable with high generalization on unseen data</li>
+      <li>Efficient, lightweight design using pretrained components</li>
+    </ul>
+  </div>
 
-  <h3>3.5 Flow Chart</h3>
-  <ul>
-    <li>📈 Data Flow Diagram (DFD)</li>
-    <li>🧠 Architecture of EfficientNet-B0</li>
-    <li>🔁 Architecture of BiLSTM</li>
-  </ul>
+  <div class="section">
+    <h2>📌 Future Scope</h2>
+    <ul>
+      <li>Integrate audio-based deepfake detection</li>
+      <li>Deploy model on mobile or edge devices</li>
+      <li>Extend to additional datasets like FaceForensics++</li>
+    </ul>
+  </div>
 
-  <h2>🔬 4. Experimentation and Results</h2>
-
-  <h3>4.1 Experimental Setup</h3>
-  <ul>
-    <li><strong>Processor:</strong> Intel Core i7-13900H</li>
-    <li><strong>GPU:</strong> NVIDIA RTX 4060 (8GB VRAM)</li>
-    <li><strong>RAM:</strong> 16 GB</li>
-    <li><strong>Storage:</strong> 1TB SSD</li>
-    <li><strong>OS:</strong> Windows 11</li>
-    <li><strong>Frameworks:</strong> Python, TensorFlow, Keras</li>
-  </ul>
-
-  <h3>4.2 Performance Metrics</h3>
-  <ul>
-    <li><strong>Precision:</strong> Correct positive predictions out of all predicted positives.</li>
-    <li><strong>Recall:</strong> Correct positive predictions out of all actual positives.</li>
-    <li><strong>F1-Score:</strong> Harmonic mean of Precision and Recall.</li>
-    <li><strong>Accuracy:</strong> Overall correctness of the model.</li>
-  </ul>
-
-  <h3>4.3 Results</h3>
-  <p>
-    The model demonstrates high accuracy and strong performance across all metrics on the Celeb-DF v2 dataset, 
-    especially in detecting manipulated (deepfake) content, validating the effectiveness of the combined 
-    EfficientNet-B0 + BiLSTM architecture.
-  </p>
-
-  <h2>📬 Contact</h2>
-  <p>
-    For inquiries, collaborations, or feedback, feel free to reach out via GitHub or email.
-  </p>
+  <div class="section">
+    <h2>📬 Contact</h2>
+    <p>
+      For collaboration or inquiries, feel free to connect via <a href="https://github.com/your-profile">GitHub</a> or email.
+    </p>
+  </div>
 
 </body>
 </html>
