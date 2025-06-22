@@ -39,15 +39,7 @@
       A scalable CNN architecture used for extracting spatial features from each video frame. It uses compound scaling to optimize depth, width, and resolution.
     </p>
 
-    <h3>2. BiLSTM</h3>
-    <p>
-      A bidirectional LSTM captures forward and backward temporal dependencies across the frame sequence, allowing the model to detect subtle inconsistencies indicative of deepfakes.
-    </p>
 
-    <h3>3. Classification</h3>
-    <p>
-      Final output is passed through a dense layer to predict whether the input video is <strong>Real</strong> or <strong>Fake</strong>.
-    </p>
   </div>
 
   <div class="section">
